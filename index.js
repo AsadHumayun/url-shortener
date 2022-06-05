@@ -67,7 +67,7 @@ app.post("/api", async (req, res) => {
 });
 
 app.get("/assets/:file", (req, res) => {
-	if (req.params.file.split("/").length > 1 || ([".env", "_assets"].includes(req.params.file))) return res.json({ message: "ACCESS_DENIED", status: "403" }).status(403);
+	if (req.params.file.split("/").length > 1 || ([".env", "_assets"].includes(req.params.file)) || (req.params.file.includes(".sqlite"))) return res.json({ message: "ACCESS_DENIED", status: "403" }).status(403);
 	res.sendFile(`${process.cwd()}/${req.params.file}`);
 });
 
