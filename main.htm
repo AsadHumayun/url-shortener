@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+		<link href="/assets/style.css" rel="stylesheet" type="text/css" />
+    <title>Scuffed URL Shortner</title>
+		<h3 class="warning">
+			Please note that any abuse of this tool may result in the termination of your API key(s). Use with care.
+		</h3>
+		<div>
+			<form action="/api" target="_self" method="post" autocomplete="off" accept-charset="utf-8" enctype="multipart/form-data">
+			  <label for="url">URL to shorten:</label><br>
+			  <input type="text" id="url" name="url"><br>
+			  <label for="auth">Authorisation:</label><br>
+			  <input type="password" id="auth" name="auth"><br><br>
+				<input type="submit" value="Submit">
+				<input type="reset">
+			</form>
+		</div>
+  </head>
+  <body>
+	<meta property="og:site_name" content="Free URL Shortener">
+	<meta property="og:url" content="https://www.google.com/search?q=rick+astley+never+gonna+give+you+up/">
+	<meta property="og:title" content="URL Shortener">
+	<meta property="og:description" content="This tool allows you to shorten URLs">
+	<meta property="og:type" content="website">
+	<meta name="theme-color" content="#4bebc3">
+  </body>
+</html>
